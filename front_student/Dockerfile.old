@@ -1,0 +1,18 @@
+# First stage: Build the application
+FROM mhart/alpine-node:14 AS builder  
+# Updated to use Node.js 14
+WORKDIR /app
+COPY . .
+RUN yarn install
+RUN yarn build
+
+# Second stage: Serve the application
+FROM mhart/alpine-node:14  
+# Updated to use Node.js 14
+WORKDIR /app
+# Copy the built application from the 'builder' stage
+COPY --from=builder /app/build .
+# Install serve to serve the application
+RUN yarn global add serve
+CMD ["serve", "-p", "80", "-s", "."]
+

@@ -1,0 +1,24 @@
+services:
+  front:
+    build: .
+    ports:
+      - 8080:80
+    restart: always
+
+  node_exporter:
+    image: quay.io/prometheus/node-exporter:latest
+    container_name: node_exporter
+    command:
+      - '--path.rootfs=/host'
+    network_mode: host
+    pid: host
+    restart: unless-stopped
+    volumes:
+      - '/:/host:ro,rslave'
+
+  promtail:
+    image: grafana/promtail:1.4.1
+    volumes:
+      - /var/lib/docker/containers:/var/lib/docker/containers
+      - /home/admuser/front/config.yml:/etc/promtail/config.yml  # Adjusted to match the file path used in command
+    command: -config.file=/etc/promtail/config.yml

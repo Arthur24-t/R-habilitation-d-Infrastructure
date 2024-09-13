@@ -1,0 +1,234 @@
+front (alpine 3.13.5)
+
+Total: 37 (UNKNOWN: 0, LOW: 0, MEDIUM: 6, HIGH: 27, CRITICAL: 4)
+
+┌──────────────┬────────────────┬──────────┬────────┬───────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
+│   Library    │ Vulnerability  │ Severity │ Status │ Installed Version │ Fixed Version │                            Title                             │
+├──────────────┼────────────────┼──────────┼────────┼───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ apk-tools    │ CVE-2021-36159 │ CRITICAL │ fixed  │ 2.12.5-r0         │ 2.12.6-r0     │ libfetch: an out of boundary read while libfetch uses strtol │
+│              │                │          │        │                   │               │ to parse...                                                  │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-36159                   │
+├──────────────┼────────────────┼──────────┤        ├───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ busybox      │ CVE-2021-42378 │ HIGH     │        │ 1.32.1-r6         │ 1.32.1-r7     │ busybox: use-after-free in awk applet leads to denial of     │
+│              │                │          │        │                   │               │ service and possibly...                                      │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-42378                   │
+│              ├────────────────┤          │        │                   │               ├──────────────────────────────────────────────────────────────┤
+│              │ CVE-2021-42379 │          │        │                   │               │ busybox: use-after-free in awk applet leads to denial of     │
+│              │                │          │        │                   │               │ service and possibly...                                      │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-42379                   │
+│              ├────────────────┤          │        │                   │               ├──────────────────────────────────────────────────────────────┤
+│              │ CVE-2021-42380 │          │        │                   │               │ busybox: use-after-free in awk applet leads to denial of     │
+│              │                │          │        │                   │               │ service and possibly...                                      │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-42380                   │
+│              ├────────────────┤          │        │                   │               ├──────────────────────────────────────────────────────────────┤
+│              │ CVE-2021-42381 │          │        │                   │               │ busybox: use-after-free in awk applet leads to denial of     │
+│              │                │          │        │                   │               │ service and possibly...                                      │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-42381                   │
+│              ├────────────────┤          │        │                   │               ├──────────────────────────────────────────────────────────────┤
+│              │ CVE-2021-42382 │          │        │                   │               │ busybox: use-after-free in awk applet leads to denial of     │
+│              │                │          │        │                   │               │ service and possibly...                                      │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-42382                   │
+│              ├────────────────┤          │        │                   │               ├──────────────────────────────────────────────────────────────┤
+│              │ CVE-2021-42383 │          │        │                   │               │ busybox: use-after-free in awk applet leads to denial of     │
+│              │                │          │        │                   │               │ service and possibly...                                      │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-42383                   │
+│              ├────────────────┤          │        │                   │               ├──────────────────────────────────────────────────────────────┤
+│              │ CVE-2021-42384 │          │        │                   │               │ busybox: use-after-free in awk applet leads to denial of     │
+│              │                │          │        │                   │               │ service and possibly...                                      │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-42384                   │
+│              ├────────────────┤          │        │                   │               ├──────────────────────────────────────────────────────────────┤
+│              │ CVE-2021-42385 │          │        │                   │               │ busybox: use-after-free in awk applet leads to denial of     │
+│              │                │          │        │                   │               │ service and possibly...                                      │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-42385                   │
+│              ├────────────────┤          │        │                   │               ├──────────────────────────────────────────────────────────────┤
+│              │ CVE-2021-42386 │          │        │                   │               │ busybox: use-after-free in awk applet leads to denial of     │
+│              │                │          │        │                   │               │ service and possibly...                                      │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-42386                   │
+│              ├────────────────┤          │        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│              │ CVE-2022-28391 │          │        │                   │ 1.32.1-r8     │ busybox: remote attackers may execute arbitrary code if      │
+│              │                │          │        │                   │               │ netstat is used                                              │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2022-28391                   │
+│              ├────────────────┤          │        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│              │ CVE-2022-30065 │          │        │                   │ 1.32.1-r9     │ busybox: A use-after-free in Busybox's awk applet leads to   │
+│              │                │          │        │                   │               │ denial of service...                                         │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2022-30065                   │
+│              ├────────────────┼──────────┤        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│              │ CVE-2021-42374 │ MEDIUM   │        │                   │ 1.32.1-r7     │ busybox: out-of-bounds read in unlzma applet leads to        │
+│              │                │          │        │                   │               │ information leak and denial...                               │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-42374                   │
+│              ├────────────────┤          │        │                   │               ├──────────────────────────────────────────────────────────────┤
+│              │ CVE-2021-42375 │          │        │                   │               │ busybox: incorrect handling of a special element in ash      │
+│              │                │          │        │                   │               │ applet leads to...                                           │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-42375                   │
+├──────────────┼────────────────┼──────────┤        ├───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ libcrypto1.1 │ CVE-2021-3711  │ CRITICAL │        │ 1.1.1k-r0         │ 1.1.1l-r0     │ openssl: SM2 Decryption Buffer Overflow                      │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-3711                    │
+│              ├────────────────┼──────────┤        │                   │               ├──────────────────────────────────────────────────────────────┤
+│              │ CVE-2021-3712  │ HIGH     │        │                   │               │ openssl: Read buffer overruns processing ASN.1 strings       │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-3712                    │
+│              ├────────────────┤          │        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│              │ CVE-2022-0778  │          │        │                   │ 1.1.1n-r0     │ openssl: Infinite loop in BN_mod_sqrt() reachable when       │
+│              │                │          │        │                   │               │ parsing certificates                                         │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2022-0778                    │
+│              ├────────────────┼──────────┤        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│              │ CVE-2022-2097  │ MEDIUM   │        │                   │ 1.1.1q-r0     │ openssl: AES OCB fails to encrypt some bytes                 │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2022-2097                    │
+├──────────────┼────────────────┼──────────┤        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│ libssl1.1    │ CVE-2021-3711  │ CRITICAL │        │                   │ 1.1.1l-r0     │ openssl: SM2 Decryption Buffer Overflow                      │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-3711                    │
+│              ├────────────────┼──────────┤        │                   │               ├──────────────────────────────────────────────────────────────┤
+│              │ CVE-2021-3712  │ HIGH     │        │                   │               │ openssl: Read buffer overruns processing ASN.1 strings       │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-3712                    │
+│              ├────────────────┤          │        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│              │ CVE-2022-0778  │          │        │                   │ 1.1.1n-r0     │ openssl: Infinite loop in BN_mod_sqrt() reachable when       │
+│              │                │          │        │                   │               │ parsing certificates                                         │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2022-0778                    │
+│              ├────────────────┼──────────┤        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│              │ CVE-2022-2097  │ MEDIUM   │        │                   │ 1.1.1q-r0     │ openssl: AES OCB fails to encrypt some bytes                 │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2022-2097                    │
+├──────────────┼────────────────┼──────────┤        ├───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ ssl_client   │ CVE-2021-42378 │ HIGH     │        │ 1.32.1-r6         │ 1.32.1-r7     │ busybox: use-after-free in awk applet leads to denial of     │
+│              │                │          │        │                   │               │ service and possibly...                                      │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-42378                   │
+│              ├────────────────┤          │        │                   │               ├──────────────────────────────────────────────────────────────┤
+│              │ CVE-2021-42379 │          │        │                   │               │ busybox: use-after-free in awk applet leads to denial of     │
+│              │                │          │        │                   │               │ service and possibly...                                      │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-42379                   │
+│              ├────────────────┤          │        │                   │               ├──────────────────────────────────────────────────────────────┤
+│              │ CVE-2021-42380 │          │        │                   │               │ busybox: use-after-free in awk applet leads to denial of     │
+│              │                │          │        │                   │               │ service and possibly...                                      │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-42380                   │
+│              ├────────────────┤          │        │                   │               ├──────────────────────────────────────────────────────────────┤
+│              │ CVE-2021-42381 │          │        │                   │               │ busybox: use-after-free in awk applet leads to denial of     │
+│              │                │          │        │                   │               │ service and possibly...                                      │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-42381                   │
+│              ├────────────────┤          │        │                   │               ├──────────────────────────────────────────────────────────────┤
+│              │ CVE-2021-42382 │          │        │                   │               │ busybox: use-after-free in awk applet leads to denial of     │
+│              │                │          │        │                   │               │ service and possibly...                                      │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-42382                   │
+│              ├────────────────┤          │        │                   │               ├──────────────────────────────────────────────────────────────┤
+│              │ CVE-2021-42383 │          │        │                   │               │ busybox: use-after-free in awk applet leads to denial of     │
+│              │                │          │        │                   │               │ service and possibly...                                      │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-42383                   │
+│              ├────────────────┤          │        │                   │               ├──────────────────────────────────────────────────────────────┤
+│              │ CVE-2021-42384 │          │        │                   │               │ busybox: use-after-free in awk applet leads to denial of     │
+│              │                │          │        │                   │               │ service and possibly...                                      │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-42384                   │
+│              ├────────────────┤          │        │                   │               ├──────────────────────────────────────────────────────────────┤
+│              │ CVE-2021-42385 │          │        │                   │               │ busybox: use-after-free in awk applet leads to denial of     │
+│              │                │          │        │                   │               │ service and possibly...                                      │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-42385                   │
+│              ├────────────────┤          │        │                   │               ├──────────────────────────────────────────────────────────────┤
+│              │ CVE-2021-42386 │          │        │                   │               │ busybox: use-after-free in awk applet leads to denial of     │
+│              │                │          │        │                   │               │ service and possibly...                                      │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-42386                   │
+│              ├────────────────┤          │        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│              │ CVE-2022-28391 │          │        │                   │ 1.32.1-r8     │ busybox: remote attackers may execute arbitrary code if      │
+│              │                │          │        │                   │               │ netstat is used                                              │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2022-28391                   │
+│              ├────────────────┤          │        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│              │ CVE-2022-30065 │          │        │                   │ 1.32.1-r9     │ busybox: A use-after-free in Busybox's awk applet leads to   │
+│              │                │          │        │                   │               │ denial of service...                                         │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2022-30065                   │
+│              ├────────────────┼──────────┤        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│              │ CVE-2021-42374 │ MEDIUM   │        │                   │ 1.32.1-r7     │ busybox: out-of-bounds read in unlzma applet leads to        │
+│              │                │          │        │                   │               │ information leak and denial...                               │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-42374                   │
+│              ├────────────────┤          │        │                   │               ├──────────────────────────────────────────────────────────────┤
+│              │ CVE-2021-42375 │          │        │                   │               │ busybox: incorrect handling of a special element in ash      │
+│              │                │          │        │                   │               │ applet leads to...                                           │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-42375                   │
+├──────────────┼────────────────┼──────────┤        ├───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ zlib         │ CVE-2022-37434 │ CRITICAL │        │ 1.2.11-r3         │ 1.2.12-r2     │ zlib: heap-based buffer over-read and overflow in inflate()  │
+│              │                │          │        │                   │               │ in inflate.c via a...                                        │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2022-37434                   │
+│              ├────────────────┼──────────┤        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│              │ CVE-2018-25032 │ HIGH     │        │                   │ 1.2.12-r0     │ zlib: A flaw found in zlib when compressing (not             │
+│              │                │          │        │                   │               │ decompressing) certain inputs...                             │
+│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2018-25032                   │
+└──────────────┴────────────────┴──────────┴────────┴───────────────────┴───────────────┴──────────────────────────────────────────────────────────────┘
+2024-07-07T15:10:46+02:00       INFO    Table result includes only package filenames. Use '--format json' option to get the full path to the package file.
+
+Node.js (node-pkg)
+
+Total: 21 (UNKNOWN: 0, LOW: 1, MEDIUM: 4, HIGH: 15, CRITICAL: 1)
+
+┌─────────────────────────────────────┬────────────────┬──────────┬──────────┬───────────────────┬──────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────┐
+│               Library               │ Vulnerability  │ Severity │  Status  │ Installed Version │                      Fixed Version                       │                            Title                             │
+├─────────────────────────────────────┼────────────────┼──────────┼──────────┼───────────────────┼──────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ @npmcli/arborist (package.json)     │ CVE-2021-39134 │ HIGH     │ fixed    │ 2.6.4             │ 2.8.2                                                    │ nodejs-arborist: symlink following vulnerability             │
+│                                     │                │          │          │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2021-39134                   │
+│                                     ├────────────────┤          │          │                   │                                                          ├──────────────────────────────────────────────────────────────┤
+│                                     │ CVE-2021-39135 │          │          │                   │                                                          │ nodejs-arborist: symlink following vulnerability             │
+│                                     │                │          │          │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2021-39135                   │
+├─────────────────────────────────────┼────────────────┤          │          ├───────────────────┼──────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ ansi-regex (package.json)           │ CVE-2021-3807  │          │          │ 3.0.0             │ 6.0.1, 5.0.1, 4.1.1, 3.0.1                               │ nodejs-ansi-regex: Regular expression denial of service      │
+│                                     │                │          │          │                   │                                                          │ (ReDoS) matching ANSI escape codes                           │
+│                                     │                │          │          │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2021-3807                    │
+│                                     │                │          │          ├───────────────────┤                                                          │                                                              │
+│                                     │                │          │          │ 5.0.0             │                                                          │                                                              │
+│                                     │                │          │          │                   │                                                          │                                                              │
+│                                     │                │          │          │                   │                                                          │                                                              │
+├─────────────────────────────────────┼────────────────┤          │          ├───────────────────┼──────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ http-cache-semantics (package.json) │ CVE-2022-25881 │          │          │ 4.1.0             │ 4.1.1                                                    │ http-cache-semantics: Regular Expression Denial of Service   │
+│                                     │                │          │          │                   │                                                          │ (ReDoS) vulnerability                                        │
+│                                     │                │          │          │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2022-25881                   │
+├─────────────────────────────────────┼────────────────┤          ├──────────┼───────────────────┼──────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ ip (package.json)                   │ CVE-2024-29415 │          │ affected │ 1.1.5             │                                                          │ node-ip: Incomplete fix for CVE-2023-42282                   │
+│                                     │                │          │          │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2024-29415                   │
+│                                     ├────────────────┼──────────┼──────────┤                   ├──────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                     │ CVE-2023-42282 │ LOW      │ fixed    │                   │ 2.0.1, 1.1.9                                             │ nodejs-ip: arbitrary code execution via the isPublic()       │
+│                                     │                │          │          │                   │                                                          │ function                                                     │
+│                                     │                │          │          │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2023-42282                   │
+├─────────────────────────────────────┼────────────────┼──────────┤          ├───────────────────┼──────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ json-schema (package.json)          │ CVE-2021-3918  │ CRITICAL │          │ 0.2.3             │ 0.4.0                                                    │ nodejs-json-schema: Prototype pollution vulnerability        │
+│                                     │                │          │          │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2021-3918                    │
+├─────────────────────────────────────┼────────────────┼──────────┤          ├───────────────────┼──────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ minimatch (package.json)            │ CVE-2022-3517  │ HIGH     │          │ 3.0.4             │ 3.0.5                                                    │ nodejs-minimatch: ReDoS via the braceExpand function         │
+│                                     │                │          │          │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2022-3517                    │
+├─────────────────────────────────────┼────────────────┤          │          ├───────────────────┼──────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ npm (package.json)                  │ CVE-2022-29244 │          │          │ 7.19.1            │ 8.11.0                                                   │ nodejs: npm pack ignores root-level .gitignore and           │
+│                                     │                │          │          │                   │                                                          │ .npmignore file exclusion directives when...                 │
+│                                     │                │          │          │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2022-29244                   │
+├─────────────────────────────────────┼────────────────┤          │          ├───────────────────┼──────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ qs (package.json)                   │ CVE-2022-24999 │          │          │ 6.5.2             │ 6.10.3, 6.9.7, 6.8.3, 6.7.3, 6.6.1, 6.5.3, 6.4.1, 6.3.3, │ express: "qs" prototype poisoning causes the hang of the     │
+│                                     │                │          │          │                   │ 6.2.4                                                    │ node process                                                 │
+│                                     │                │          │          │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2022-24999                   │
+├─────────────────────────────────────┼────────────────┼──────────┼──────────┼───────────────────┼──────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ request (package.json)              │ CVE-2023-28155 │ MEDIUM   │ affected │ 2.88.2            │                                                          │ The Request package through 2.88.1 for Node.js allows a      │
+│                                     │                │          │          │                   │                                                          │ bypass of SSRF...                                            │
+│                                     │                │          │          │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2023-28155                   │
+├─────────────────────────────────────┼────────────────┤          ├──────────┼───────────────────┼──────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ semver (package.json)               │ CVE-2022-25883 │          │ fixed    │ 7.3.5             │ 7.5.2, 6.3.1, 5.7.2                                      │ nodejs-semver: Regular expression denial of service          │
+│                                     │                │          │          │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2022-25883                   │
+├─────────────────────────────────────┼────────────────┼──────────┤          ├───────────────────┼──────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ tar (package.json)                  │ CVE-2021-32803 │ HIGH     │          │ 6.1.0             │ 3.2.3, 4.4.15, 5.0.7, 6.1.2                              │ nodejs-tar: Insufficient symlink protection allowing         │
+│                                     │                │          │          │                   │                                                          │ arbitrary file creation and overwrite                        │
+│                                     │                │          │          │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2021-32803                   │
+│                                     ├────────────────┤          │          │                   ├──────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                     │ CVE-2021-32804 │          │          │                   │ 3.2.2, 4.4.14, 5.0.6, 6.1.1                              │ nodejs-tar: Insufficient absolute path sanitization allowing │
+│                                     │                │          │          │                   │                                                          │ arbitrary file creation and overwrite                        │
+│                                     │                │          │          │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2021-32804                   │
+│                                     ├────────────────┤          │          │                   ├──────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                     │ CVE-2021-37701 │          │          │                   │ 4.4.16, 5.0.8, 6.1.7                                     │ nodejs-tar: Insufficient symlink protection due to directory │
+│                                     │                │          │          │                   │                                                          │ cache poisoning using symbolic links...                      │
+│                                     │                │          │          │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2021-37701                   │
+│                                     ├────────────────┤          │          │                   ├──────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                     │ CVE-2021-37712 │          │          │                   │ 4.4.18, 5.0.10, 6.1.9                                    │ nodejs-tar: Insufficient symlink protection due to directory │
+│                                     │                │          │          │                   │                                                          │ cache poisoning using symbolic links...                      │
+│                                     │                │          │          │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2021-37712                   │
+│                                     ├────────────────┤          │          │                   │                                                          ├──────────────────────────────────────────────────────────────┤
+│                                     │ CVE-2021-37713 │          │          │                   │                                                          │ nodejs-tar: Arbitrary File Creation/Overwrite on Windows via │
+│                                     │                │          │          │                   │                                                          │ insufficient relative path sanitization                      │
+│                                     │                │          │          │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2021-37713                   │
+│                                     ├────────────────┼──────────┤          │                   ├──────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                     │ CVE-2024-28863 │ MEDIUM   │          │                   │ 6.2.1                                                    │ node-tar: denial of service while parsing a tar file due to  │
+│                                     │                │          │          │                   │                                                          │ lack...                                                      │
+│                                     │                │          │          │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2024-28863                   │
+├─────────────────────────────────────┼────────────────┤          │          ├───────────────────┼──────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ tough-cookie (package.json)         │ CVE-2023-26136 │          │          │ 2.5.0             │ 4.1.3                                                    │ tough-cookie: prototype pollution in cookie memstore         │
+│                                     │                │          │          │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2023-26136                   │
+├─────────────────────────────────────┼────────────────┼──────────┤          ├───────────────────┼──────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ yarn (package.json)                 │ CVE-2021-4435  │ HIGH     │          │ 1.22.10           │ 1.22.13                                                  │ yarn: untrusted search path                                  │
+│                                     │                │          │          │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2021-4435                    │
+└─────────────────────────────────────┴────────────────┴──────────┴──────────┴───────────────────┴──────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────┘

@@ -1,0 +1,37 @@
+# File: playbook.yml
+
+- name: Clonage du dépôt et Installation des dépendances pour le front
+  hosts: front_server
+  tasks:
+
+    - name: Clonage du dépôt front
+      git:
+        repo: "http://oauth2:glpat-M1ZSxV7i3j2SZYnDmz1X@192.168.5.35/nsa_810/front.git"
+        dest: /home/service-web/front
+      become_user: service-web
+      tags:
+        - build
+
+    - name: Renommer .env.example en .env
+      command: cp /home/service-web/front/.env.example /home/service-web/front/.env
+      become_user: service-web
+      tags:
+        - build
+
+    - name: build docker
+      command: docker compose build
+      args:
+        chdir: /home/service-web/front/
+      become_user: service-web
+      tags:
+        - build
+
+    - name: lancer docker
+      command: docker compose up -d 
+      args:
+        chdir: /home/service-web/front/
+      become_user: service-web
+      tags:
+        - deploy
+
+

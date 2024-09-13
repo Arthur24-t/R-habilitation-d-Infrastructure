@@ -1,0 +1,22 @@
+groups:
+  - name: webserver_check
+    rules:
+      - alert: WebServerDown
+        expr: probe_success{job="blackbox", module="http_2xx", instance="http://192.168.5.32"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Le serveur web est DOWN"
+          description: "Le serveur web à http://192.168.5.32 ne répond pas aux requêtes HTTP."
+
+  - name: mysql_check
+    rules:
+      - alert: MysqlDown
+        expr: mysql_up{instance="10.0.0.6:9104"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Le serveur MySQL est DOWN"
+          description: "Le serveur MySQL à 10.0.0.6:9104 ne répond pas."

@@ -1,0 +1,27 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  ANSIBLE_PLAYBOOK: "deploy.yml"
+  ANSIBLE_HOST_KEY_CHECKING: "False"
+
+build:
+  stage: build
+  script:
+    - ansible-playbook -i inventory.ini $ANSIBLE_PLAYBOOK --tags build
+  tags:
+    - devops
+  only:
+    - main
+
+deploy:
+  stage: deploy
+  script:
+    - ansible-playbook -i inventory.ini $ANSIBLE_PLAYBOOK --tags deploy
+  tags:
+    - devops
+  only:
+    - main
+  when: manual
+

@@ -1,0 +1,30 @@
+# File: playbook.yml
+
+- name: Clonage du dépôt et Installation des dépendances pour le octoberscms
+  hosts: october_server
+  tasks:
+    - name: Clonage du dépôt octoberscms
+      git:
+        repo: "http://oauth2:glpat-8m_xGSh9PAzsAivE_ZdYp@192.168.5.35/nsa_810/ocotobercms.git"
+        dest: /home/service-web/octoberscms
+      become_user: service-web
+      tags:
+        - build
+
+    - name: build docker
+      command: docker compose build
+      args:
+        chdir: /home/service-web/octoberscms/
+      become_user: service-web
+      tags:
+        - build
+
+    - name: lancer docker
+      command: docker compose up -d 
+      args:
+        chdir: /home/service-web/octoberscms/
+      become_user: service-web
+      tags:
+        - deploy
+
+

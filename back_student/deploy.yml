@@ -1,0 +1,30 @@
+# File: playbook.yml
+
+- name: Clonage du dépôt et Installation des dépendances pour le back
+  hosts: back_server
+  tasks:
+    - name: Clonage du dépôt back
+      git:
+        repo: "http://oauth2:glpat-grvHDMBWwaRsCHhMR8qX@192.168.5.35/nsa_810/back.git"
+        dest: /home/service-web/back
+      become_user: service-web
+      tags:
+        - build
+
+    - name: build docker
+      command: docker compose build
+      args:
+        chdir: /home/service-web/back/
+      become_user: service-web
+      tags:
+        - build
+
+    - name: lancer docker
+      command: docker compose up -d 
+      args:
+        chdir: /home/service-web/back/
+      become_user: service-web
+      tags:
+        - deploy
+
+

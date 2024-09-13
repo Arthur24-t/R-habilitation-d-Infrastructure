@@ -1,0 +1,17 @@
+npm audit
+74 packages are looking for funding
+  run `npm fund` for details
+
+# npm audit report
+
+validator  <=13.6.0
+Severity: moderate
+Inefficient Regular Expression Complexity in Validator.js - https://github.com/advisories/GHSA-xx4c-jj58-r7x6
+Inefficient Regular Expression Complexity in validator.js - https://github.com/advisories/GHSA-qgmg-gppg-76g5
+fix available via `npm audit fix`
+node_modules/validator
+
+1 moderate severity vulnerability
+
+To address all issues, run:
+  npm audit fix
